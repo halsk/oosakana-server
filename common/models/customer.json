@@ -1,0 +1,35 @@
+{
+  "name": "Customer",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "number",
+      "id": true,
+      "required": true,
+      "index": true
+    },
+    "nickname": {
+      "type": "string"
+    },
+    "picapicard_id": {
+      "type": "string"
+    },
+    "student_id": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "customer_id": {
+      "type": "hasMany",
+      "model": "Activity",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
